@@ -1,0 +1,11 @@
+*
+!.astylerc
+!.devbashrc
+!.gitignore
+!.emacs
+!.emacs.d
+!.perltidyrc
+.emacs.d/auto-save-list
+.emacs.d/session*
+*~
+*#*
