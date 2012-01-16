@@ -212,12 +212,12 @@ If FILENAME is omitted, the current buffer's file name is used."
     (if (string= compiler-output "")
         (message "Compiled and saved %s" (coffee-compiled-file-name))
       (let* ((msg (car (split-string compiler-output "[\n\r]+")))
-         (line (and (string-match "on line \\([0-9]+\\)" msg)
-            (string-to-number (match-string 1 msg)))))
-    (message msg)
-    (when (and coffee-compile-jump-to-error line (> line 0))
-      (goto-char (point-min))
-      (forward-line (1- line)))))))
+	     (line (and (string-match "on line \\([0-9]+\\)" msg)
+			(string-to-number (match-string 1 msg)))))
+	(message msg)
+	(when (and coffee-compile-jump-to-error line (> line 0))
+	  (goto-char (point-min))
+	  (forward-line (1- line)))))))
 
 (defun coffee-compile-buffer ()
   "Compiles the current buffer and displays the JS in another buffer."
