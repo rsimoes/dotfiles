@@ -57,8 +57,8 @@
 
 (setq
 	indent-line-function 'insert-tab
-	default-tab-width 4
-	tab-width 4
+	default-tab-width 3
+	tab-width 3
 	tab-stop-list (number-sequence 4 120 4)
 	backward-delete-char-untabify-method nil)
 
