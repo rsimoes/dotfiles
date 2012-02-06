@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/")
+(require 'ats-mode)
 (require 'color-theme)
 (require 'cperl-mode)
 (require 'coffee-mode)
