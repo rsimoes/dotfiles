@@ -52,14 +52,14 @@
 		cperl-continued-statement-offset 0
 		cperl-extra-newline-before-brace nil
 		cperl-tab-always-indent t
-		cperl-indent-level 3
+		cperl-indent-level 4
 		cperl-indent-parens-as-block t
 		cperl-electric-keywords nil)))
 
 (setq
 	indent-line-function 'insert-tab
-	default-tab-width 3
-	tab-width 3
+	default-tab-width 4
+	tab-width 4
 	tab-stop-list (number-sequence 4 120 4)
 	backward-delete-char-untabify-method nil)
 
