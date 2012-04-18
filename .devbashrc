@@ -5,6 +5,6 @@ export HARNESS_OPTIONS=j9 # for CPAN make tests
 source ~/perl5/perlbrew/etc/bashrc # perlbrew!
 
 source ~/.rvm/scripts/rvm          # rvm!
-alias rvm="CC=GCC rvm"
-alias gem="CC=GCC gem"
+alias rvm="CC=gcc rvm"
+alias gem="CC=gcc gem"
 export PATH="/home/rsimoes/opt/node/bin:$PATH"
