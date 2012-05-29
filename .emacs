@@ -31,6 +31,7 @@
 (setq-default make-backup-files nil
       inhibit-startup-screen t
       indent-tabs-mode nil
+      tabs-always-indent t
       tab-width 4
       indent-line-function 'insert-tab
       backward-delete-char-untabify-method t
