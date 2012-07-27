@@ -68,7 +68,7 @@
                   cperl-indent-parens-as-block t
                   cperl-electric-keywords nil
                   cperl-electric-parens t
-                  cperl-tab-always-indent nil
+                  cperl-tab-always-indent t
                   indent-tabs-mode nil)))
 
 ;(add-hook 'sql-mode-hook
