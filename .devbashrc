@@ -1,0 +1,11 @@
+export CC=clang
+export EDITOR=emacs
+
+export HARNESS_OPTIONS=j9 # for CPAN make tests
+source ~/perl5/perlbrew/etc/bashrc # perlbrew!
+
+source ~/.rvm/scripts/rvm          # rvm!
+alias rvm="CC=gcc rvm"
+alias gem="CC=gcc gem"
+opt_paths=`perl -e 'print join ":", </home/rsimoes/opt/*/{sbin,bin}>'`
+export PATH="$opt_paths:/home/rsimoes/.cabal/bin:$PATH"

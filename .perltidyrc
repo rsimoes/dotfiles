@@ -1,0 +1,10 @@
+-b
+-l=120
+-et=1
+-i=1
+-pt=1
+-nsfs
+-nolq
+-vtc=2
+-sot
+-sct
