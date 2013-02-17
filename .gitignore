@@ -1,12 +1,2 @@
-/*
-!.astylerc
-!.devbashrc
-!.gitignore
-!.emacs
-!.emacs.d
-!.dzil
-!.perltidyrc
-.emacs.d/auto-save-list
-.emacs.d/session*
 *~
 *#*

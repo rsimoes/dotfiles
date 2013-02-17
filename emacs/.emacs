@@ -1,9 +1,12 @@
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/haskell-mode/")
 (require 'ats-mode)
 (require 'color-theme)
 (require 'cperl-mode)
-(require 'coffee-mode)
 (require 'whitespace)
+(require 'jade-mode)
+(require 'stylus-mode)
+(require 'haskell-mode)
 
 (color-theme-initialize)
 (color-theme-taylor)
@@ -12,8 +15,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Map major modes to file extensions
-(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+(add-to-list 'auto-mode-alist '("\\.rkt$" . (quack-pltfile-mode scheme-mode)))
 (add-to-list 'auto-mode-alist
              '("\\.\\([pP][Llm]\\|cgi\\|t\\|psgi\\)\\'" . cperl-mode))
 (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
@@ -31,8 +33,6 @@
 (setq-default make-backup-files nil
       inhibit-startup-screen t
       indent-tabs-mode nil
-      tabs-always-indent t
-      tab-width 4
       indent-line-function 'insert-tab
       backward-delete-char-untabify-method t
       whitespace-style '(face trailing tabs lines-tail empty))
@@ -68,15 +68,14 @@
                   cperl-indent-parens-as-block t
                   cperl-electric-keywords nil
                   cperl-electric-parens t
-                  cperl-tab-always-indent t
+                  cperl-tab-always-indent nil
                   indent-tabs-mode nil)))
+
+(add-hook 'js-mode-hook
+          (lambda () (setq js-indent-level 2)))
 
 ;(add-hook 'sql-mode-hook
 ;          (lambda ()
 ;            (setq default-tab-width 2
 ;                  whitespace-line-column 100
 ;                  backward-delete-char-untabify-method t)))
-
-;(add-hook 'coffee-mode-hook
-;          (lambda ()
-;            (set (make-local-variable 'tab-width) 2)))
