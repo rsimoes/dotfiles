@@ -1,0 +1,12 @@
+[submodule "emacs/yaml-mode"]
+	path = emacs/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "emacs/haskell-mode"]
+	path = emacs/haskell-mode
+	url = https://github.com/haskell/haskell-mode
+[submodule "emacs/cperl-mode"]
+	path = emacs/cperl-mode
+	url = https://github.com/jrockway/cperl-mode.git
+[submodule "emacs/stylus-mode"]
+	path = emacs/stylus-mode
+	url = https://github.com/LearnBoost/stylus.git
