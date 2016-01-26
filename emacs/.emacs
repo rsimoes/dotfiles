@@ -1,15 +1,8 @@
-(add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/haskell-mode/")
-(require 'ats-mode)
-(require 'color-theme)
 (require 'cperl-mode)
-(require 'whitespace)
-(require 'jade-mode)
-(require 'stylus-mode)
-(require 'haskell-mode)
 
-(color-theme-initialize)
-(color-theme-taylor)
+;; Theme:
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'zenburn t)
 
 ;; General settings
 (fset 'yes-or-no-p 'y-or-n-p)
