@@ -1,4 +1,12 @@
+(require 'package)
+
+;; MELPA:
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
 (require 'cperl-mode)
+(require 'scss-mode)
 
 ;; Theme:
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -6,6 +14,10 @@
 
 ;; General settings
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; Jedi.el:
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
 
 ;; Map major modes to file extensions
 (add-to-list 'auto-mode-alist '("\\.rkt$" . (quack-pltfile-mode scheme-mode)))
