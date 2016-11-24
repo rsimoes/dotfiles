@@ -4,9 +4,10 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
+(add-to-list 'load-path "~/.emacs.d/paradox.el/")
 
 (require 'cperl-mode)
-(require 'scss-mode)
+(require 'paradox)
 
 ;; Theme:
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -21,6 +22,7 @@
 
 ;; Map major modes to file extensions
 (add-to-list 'auto-mode-alist '("\\.rkt$" . (quack-pltfile-mode scheme-mode)))
+(add-to-list 'auto-mode-alist '("\\.txt" . paradox-mode))
 (add-to-list 'auto-mode-alist
              '("\\.\\([pP][Llm]\\|cgi\\|t\\|psgi\\)\\'" . cperl-mode))
 (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
@@ -32,15 +34,17 @@
 (global-ede-mode t)
 (global-font-lock-mode t)
 (global-linum-mode t)
+; (global-electric-indent-mode nil)
 (global-whitespace-mode t)
 (show-paren-mode t)
 
 (setq-default make-backup-files nil
-      inhibit-startup-screen t
-      indent-tabs-mode nil
-      indent-line-function 'insert-tab
-      backward-delete-char-untabify-method t
-      whitespace-style '(face trailing tabs lines-tail empty))
+              inhibit-startup-screen t
+              indent-tabs-mode nil
+              indent-line-function 'insert-tab
+              backward-delete-char-untabify-method t
+              whitespace-line-column 79
+              whitespace-style '(face trailing tabs lines-tail empty))
 
 (let ((faces
        '(
@@ -75,6 +79,12 @@
                   cperl-electric-parens t
                   cperl-tab-always-indent nil
                   indent-tabs-mode nil)))
+
+(add-hook 'paradox-mode-hook
+          (lambda () (setq whitespace-style '(face trailing lines-tail empty)
+                           indent-tabs-mode t
+                           tab-width 4
+                           backward-delete-char-untabify-method nil)))
 
 (add-hook 'js-mode-hook
           (lambda () (setq js-indent-level 2)))
