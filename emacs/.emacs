@@ -22,7 +22,7 @@
 
 ;; Map major modes to file extensions
 (add-to-list 'auto-mode-alist '("\\.rkt$" . (quack-pltfile-mode scheme-mode)))
-(add-to-list 'auto-mode-alist '("\\.txt" . paradox-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(txt\\|gfx\\|gui\\|asset\\)$" . paradox-mode))
 (add-to-list 'auto-mode-alist
              '("\\.\\([pP][Llm]\\|cgi\\|t\\|psgi\\)\\'" . cperl-mode))
 (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
@@ -43,6 +43,7 @@
               indent-tabs-mode nil
               indent-line-function 'insert-tab
               backward-delete-char-untabify-method t
+	      linum-format "%d "
               whitespace-line-column 79
               whitespace-style '(face trailing tabs lines-tail empty))
 
