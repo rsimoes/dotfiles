@@ -47,23 +47,7 @@
               whitespace-line-column 79
               whitespace-style '(face trailing tabs lines-tail empty))
 
-(let ((faces
-       '(
-         (font-lock-comment-face :foreground "#4d7a70" :slant italic)
-         (font-lock-constant-face :foreground "#6b7875")
-         (font-lock-string-face :foreground "#7a633d")
-         (font-lock-type-face :foreground "grey50")
-         (font-lock-warning-face :foreground "#cd5c5c")
-         (font-lock-preprocessor-face :foreground "#596766" :weight bold)
-         (font-lock-doc-face :foreground "#707f75" :slant italic)
-         (font-lock-keyword-face :foreground "#665d9c" :weight bold)
-         (font-lock-builtin-face :foreground "gray50" :weight bold)
-         (font-lock-function-name-face :foreground "#2e5fa2" :weight bold)
-         (font-lock-variable-name-face :foreground "#6f5057" :weight bold)
-         (mode-line :background "#bedefe" :box
-                    (:line-width 2 :color "gray85")))))
-  (dolist (face faces)
-    (apply 'set-face-attribute (car face) nil (cdr face))))
+(set-fontset-font t 'unicode "Symbola" nil 'prepend)
 
 (add-hook 'cperl-mode-hook
           (lambda ()
